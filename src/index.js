@@ -1,0 +1,32 @@
+import {createHomePage} from './home.js'
+import './styles.css'
+
+
+console.log("Welcome to my Restaurant Pag");
+
+createHomePage();
+
+
+//  const backImg = new Image();
+//  backImg.src = BackgroundImg;
+
+//  const content = document.querySelector('#content')
+
+//  content.appendChild(backImg);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Photo by Deeana Creates from Pexels
