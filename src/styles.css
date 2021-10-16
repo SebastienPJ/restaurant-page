@@ -21,7 +21,7 @@ nav {
 }
 
 
-.logo-div {
+.logo-link {
   float: left;
 }
 
@@ -43,8 +43,8 @@ nav button:hover {
 }
 
 #content {
-  background: url('./back-rice.jpeg') no-repeat center;
-  background-size: cover;
+  /* background: url('./back-rice.jpeg') no-repeat center; */
+  /* background-size: cover; */
   text-align: center;
 
   border: 2px solid yellow;
