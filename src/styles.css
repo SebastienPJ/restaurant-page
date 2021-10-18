@@ -52,8 +52,9 @@ nav button:hover {
   /* text-align: center; */
 
   border: 2px solid yellow;
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw; */
+  /* height: 100vh; */
+
 
 }
 
@@ -98,18 +99,19 @@ main {
 }
 
 
-.row1 {
+.row {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.item1 {
+.item {
   display: flex;
+  width: 400px;
 }
-.item1 img {
+.item img {
   width: 200px;
-  /* background-image: url('images/pancakes.jpg'); */
+  /* background-image: url('images/eggs1.jpg'); */
 }
 
 
