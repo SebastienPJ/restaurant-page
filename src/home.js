@@ -1,9 +1,10 @@
-import backgroundImage from "./back-rice.jpeg";
-import Icon from "./icon.png";
+import backgroundImage from "./images/back-rice.jpeg";
+import Icon from "./images/icon.png";
 
 const clearPage = function() {
   const content = document.querySelector('#content');
-  content.textContent = "";
+  content.innerHTML = "";
+  content.removeAttribute('style');
 }
 
 const createMenuPage = function() {
@@ -22,31 +23,12 @@ const createHomePage = function() {
   createNavBar();
 
 
-  // myBackgroundImg.classList.add('logo-img');
-  // logoLink.appendChild(myBackgroundImg);
-
-  const primaryDiv = document.querySelector('#content');
-
-
-  const myBackgroundImg= new Image();
-  myBackgroundImg.src = backgroundImage;
-
-  // primaryDiv.style.backgroundImage = "url('./37088b799fb384b95bc0.jpeg')"
-  // primaryDiv.style.backgroundImage = "url('./back-rice.jpeg')"
-  primaryDiv.style.backgroundImage = myBackgroundImg;
-
-
-
-  // primaryDiv.appendChild(myBackgroundImg)
-
-
-  primaryDiv.style.backgroundPsition = 'center'
-  // primaryDiv.style.background = "url('./src/back-rice.jpeg') no-repeat fixed center";
-  primaryDiv.style.backgroundSize = 'cover';
-  primaryDiv.style.backgroundAttachment = 'fixed';
-
   const mainDiv = document.querySelector('#content');
- 
+  
+
+  mainDiv.style.backgroundImage = "url('./img/back-rice.jpeg')";
+  mainDiv.style.backgroundSize = 'cover';
+  mainDiv.style.backgroundPosition = 'center'
 
 
 
