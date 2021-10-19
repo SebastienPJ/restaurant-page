@@ -1,10 +1,12 @@
 import {createHomePage} from './home.js'
+import { createMenuPage } from './menu.js';
 import './styles.css'
 
 
 console.log("Welcome to my Restaurant Page");
 
-// createHomePage();
+createHomePage();
+
 
 
 

@@ -78,11 +78,11 @@ main {
   /* src/images/menu.jpg */
 }
 
-.menu-items {
+.menu-display {
   text-align: center;
 }
 
-.menu-items button {
+.menu-display button {
   margin: 20px;
   border: none;
   outline: none;
@@ -93,7 +93,7 @@ main {
   color: black;
 }
 
-.menu-items button:hover {
+.menu-display button:hover {
   border-bottom: 1px solid black;
 
 }
@@ -103,14 +103,18 @@ main {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  text-align: left;
 }
 
 .item {
   display: flex;
-  width: 400px;
+  width: 500px;
+  margin-bottom: 40px;
+  justify-content: space-between;
 }
 .item img {
   width: 200px;
+  /* margin-left: 50px; */
   /* background-image: url('images/eggs1.jpg'); */
 }
 

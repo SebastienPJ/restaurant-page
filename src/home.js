@@ -1,22 +1,12 @@
 import backgroundImage from "./images/back-rice.jpeg";
 import Icon from "./images/icon.png";
+import { createMenuPage } from "./menu";
 
 const clearPage = function() {
   const content = document.querySelector('#content');
   content.innerHTML = "";
   content.removeAttribute('style');
 }
-
-const createMenuPage = function() {
-  createNavBar();
-  console.log("menu Page created")
-}
-
-const createContactPage = function() {
-  createNavBar();
-  console.log('Contact page has been created')
-}
-
 
 
 const createHomePage = function() {
@@ -56,7 +46,7 @@ const createNavBar = function() {
   /***** LOGO LINK *****/
   const logoLink = document.createElement('a');
   logoLink.classList.add('logo-link');
-  logoLink.href = "index.html"
+  logoLink.href = "index.html";
   header.appendChild(logoLink);
 
 
@@ -77,7 +67,7 @@ const createNavBar = function() {
   homeButton.addEventListener("click", () => {
     clearPage();
     createHomePage();
-  })
+  });
   navBar.appendChild(homeButton);
 
 
@@ -87,7 +77,7 @@ const createNavBar = function() {
   menuButton.addEventListener("click", () => {
     clearPage();
     createMenuPage();
-  })
+  });
   navBar.appendChild(menuButton);
 
 
@@ -105,4 +95,4 @@ const createNavBar = function() {
 };
 
 
-export { createHomePage }
+export { createHomePage, createNavBar }
