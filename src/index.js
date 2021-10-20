@@ -5,7 +5,7 @@ import './styles.css'
 
 console.log("Welcome to my Restaurant Page");
 
-createHomePage();
+// createHomePage();
 
 
 

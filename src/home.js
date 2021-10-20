@@ -10,37 +10,45 @@ const clearPage = function() {
 
 
 const createHomePage = function() {
-  createNavBar();
 
 
   const mainDiv = document.querySelector('#content');
+
+  mainDiv.appendChild(createNavBar());
   
 
-  mainDiv.style.backgroundImage = "url('./img/back-rice.jpeg')";
-  mainDiv.style.backgroundSize = 'cover';
-  mainDiv.style.backgroundPosition = 'center'
 
 
 
   /***** Message on main page *****/
-  const headline = document.createElement('main')
+  const headline = document.createElement('main');
+  headline.style.backgroundImage = "url('./img/back-rice.jpg')";
+  headline.style.backgroundSize = 'cover';
+  headline.style.backgroundPosition = 'center'
+
+
+
   mainDiv.appendChild(headline);
 
   const message = document.createElement('h1');
-  message.textContent = "Sending patrons to cloud nine since 1943!"
+  message.textContent = "Satisfying taste buds since 1943!"
   headline.appendChild(message);
 
 };
 
 
 const createNavBar = function() {
-  const contentDiv = document.querySelector('#content');
+  // const contentDiv = document.querySelector('#content');
+
+  const navBar = document.createElement('div');
+  navBar.classList.add('navigation-bar');
+
 
 
 
   const header = document.createElement('header');
   header.classList.add('header');
-  contentDiv.appendChild(header);
+  navBar.appendChild(header);
 
 
   /***** LOGO LINK *****/
@@ -56,8 +64,8 @@ const createNavBar = function() {
   logoLink.appendChild(myIcon);
 
 
-  const navBar = document.createElement('nav');
-  header.appendChild(navBar);
+  const navButtons = document.createElement('nav');
+  header.appendChild(navButtons);
 
 
 
@@ -68,7 +76,7 @@ const createNavBar = function() {
     clearPage();
     createHomePage();
   });
-  navBar.appendChild(homeButton);
+  navButtons.appendChild(homeButton);
 
 
   /***** MENU PAGE ******/
@@ -78,7 +86,7 @@ const createNavBar = function() {
     clearPage();
     createMenuPage();
   });
-  navBar.appendChild(menuButton);
+  navButtons.appendChild(menuButton);
 
 
 
@@ -90,7 +98,9 @@ const createNavBar = function() {
     clearPage();
     createContactPage();
   })
-  navBar.appendChild(contactButton);
+  navButtons.appendChild(contactButton);
+
+  return navBar;
 
 };
 

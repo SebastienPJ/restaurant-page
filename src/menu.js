@@ -3,10 +3,11 @@ import { createNavBar } from "./home";
 
 
 const createMenuPage = function() {
-    createNavBar();
     console.log("menu Page created")
 
     const contentDiv = document.querySelector('#content');
+
+    contentDiv.appendChild(createNavBar());
 
     const menuContainer = document.createElement('div');
     menuContainer.classList.add('menu');
@@ -209,6 +210,45 @@ const createMenuPage = function() {
     const drinksButton = document.querySelector(".drinks");
     drinksButton.addEventListener('click', () => {
         console.log('Party Time!!!')
+
+        menuItems.innerHTML = `        
+        <h2>Drinks Menu</h2>
+
+        <div class="row">
+            <div class="item">
+                <div class="description">
+                    <p>Beer</p>
+                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                </div>
+                <img src="./img/beer.jpg" alt="lamb-image" class="beer">
+            </div>
+
+            <div class="item">
+                <div class="description">
+                    <p>Wine</p>
+                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                </div>
+                <img src="./img/wine.jpg" alt="pancakes" class="wine">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="item">
+                <div class="description">
+                    <p>Cocktails</p>
+                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                </div>
+                <img src="./img/cocktails.jpg" alt="eggs" class="cocktails">
+            </div>
+
+            <div class="item">
+                <div class="description">
+                    <p>Non-alcoholic</p>
+                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                </div>
+                <img src="./img/juice.jpg" alt="eggs1" class="juice">
+            </div>
+        </div>`
     })
 
 

@@ -12,22 +12,36 @@ body {
 
 h1 {
   font-size: 3rem;
-  color: #9B5151;
+  color: #ffff;
+  /* text-align: center; */
+}
+
+main {
+  /* background-color: rgba(222, 208, 191, 0.8); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 30px; */
+  /* margin-top: 10vw; */
+  /* border: 2px solid blue; */
+  height: 40vw;
 }
 
 header {
-  text-align: center;
+  /* text-align: center; */
   border: 2px solid blue;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav {
   /* background: rgba(255, 238, 147, 0.5); */
-  float: right;
+  /* float: right; */
 }
 
 
 .logo-link {
-  float: left;
+  /* float: left; */
 }
 
 
@@ -53,20 +67,13 @@ nav button:hover {
 
   border: 2px solid yellow;
   /* width: 100vw; */
-  /* height: 100vh; */
+  height: 100vh;
 
 
 }
 
 
-main {
-  background-color: rgba(222, 208, 191, 0.8);
-  display: inline-flex;
-  justify-content: center;
-  border-radius: 30px;
-  margin-top: 10vw;
-  /* border: 2px solid blue; */
-}
+
 
 
 .menu header {
