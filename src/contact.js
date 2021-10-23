@@ -76,9 +76,23 @@ const createContactPage = function() {
       <p>Zip Code</p>
       <p>000-000-0000</p>
     </div>
+
+
+    <div class="operating-hours">
+      <h2> Hours</h2>
+      <p> <span>Monday - Friday:</span> 10:00 am - 11:00 pm</p>
+      <p> <span>Saturday:</span> 9:00 am - 11:30 pm</p>
+      <p> <span>Sunday</span> 9:00 am - 9:00 pm</p>
+    
+    </div>
+
   </div>`
 
   topDiv.appendChild(contactContainer);
+
+
+  const contactHeader = document.querySelector(".contact-header");
+  contactHeader.style.backgroundImage = "url('./img/contact-header.jpg')";
 
 
 };

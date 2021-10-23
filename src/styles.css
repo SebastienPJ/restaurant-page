@@ -12,24 +12,18 @@ body {
 
 h1 {
   font-size: calc(2em + 2vw);
-  color: #ffff;
-  /* text-align: center; */
+  color: rgb(194, 193, 193);
 }
 
 main {
-  /* background-color: rgba(222, 208, 191, 0.8); */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border-radius: 30px; */
-  /* margin-top: 10vw; */
-  /* border: 2px solid blue; */
+/
   height: 40vw;
 }
 
 header {
-  /* text-align: center; */
-  /* border: 2px solid blue; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,29 +51,23 @@ nav button:hover {
   color: black;
 }
 
-#content {
-
-  /* text-align: center; */
-
-  /* border: 2px solid yellow; */
-  /* width: 100vw; */
-  /* height: 100vh; */
 
 
-}
+/***** MENU SECTION *****/
 
-
-
-
-
-.menu header {
-  /* background-image: url('images/menu.jpg'); */
+.menu-header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
-  /* src/images/menu.jpg */
 }
+
+.menu-header h1 {
+  font-size: calc(2em + 5vw);
+
+}
+
+
 
 .menu-display {
   text-align: center;
@@ -103,6 +91,14 @@ nav button:hover {
 }
 
 
+.menu-items h2 {
+  margin-bottom: 40px;
+  font-size: 2.6rem;
+  border-bottom: 3px solid black;
+  padding: 0 0 10px 0 ;
+}
+
+
 .row {
   display: flex;
   justify-content: space-around;
@@ -116,12 +112,39 @@ nav button:hover {
   margin-bottom: 40px;
   justify-content: space-between;
 }
-.item img {
-  /* width: 200px; */
-  /* margin-left: 50px; */
-  /* background-image: url('images/drinks-header.jpg'); */
+
+
+.food-name {
+  color: rgb(83, 83, 83);
+  font-size: 1.5rem;
 }
 
+.description {
+  color: rgb(151, 150, 150);
+}
+
+
+
+
+
+/***** CONTACT US SECTION *****/
+
+
+.contact-header {
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  border: 1px solid rgb(111, 117, 111);
+
+}
+
+.contact-display {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
 
 
 .contact-form h2 {
@@ -141,33 +164,22 @@ text-align: center;
   margin-bottom: 2vw;
 }
 
-label {
-  /* Uniform size & alignment */
-  /* display: inline-block;
-  width: 90px;
-  text-align: right; */
-}
-
-.submit-form {
-  /* margin-left: 90px; */
-}
-
-input,
-textarea {
-  /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
-  font: 1em sans-serif;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px #999;
-
-
-}
-
 .form-label {
   vertical-align: top;
   text-align: right;
   padding: 5px 15px;
 }
+
+
+
+input,
+textarea {
+  font: 1em sans-serif;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #999;
+}
+
+
 
 .button {
   padding-left: 0;
@@ -180,61 +192,13 @@ textarea {
 
 
 
-.contact-header {
-  margin-bottom: 5vw;
-  background-image: url('images/menu.jpg');
-  height: 500px;
-  background-position: center;
-  background-size: cover;
-  justify-content: center;
-}
-
-
-.contact-display {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.address-section,
+.operating-hours {
+  text-align: center;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-/* Color Theme Swatches in Hex */
-.My-Color-Theme-1-hex { color: #FAEFD7; }
-.My-Color-Theme-2-hex { color: #DED0BF; }
-.My-Color-Theme-3-hex { color: #F5E8DF; }
-.My-Color-Theme-4-hex { color: #DEC7BF; }
-.My-Color-Theme-5-hex { color: #FADBD7; }
-
-/* Color Theme Swatches in RGBA */
-.My-Color-Theme-1-rgba { color: rgba(249, 239, 214, 1); }
-.My-Color-Theme-2-rgba { color: rgba(221, 207, 191, 1); }
-.My-Color-Theme-3-rgba { color: rgba(244, 232, 223, 1); }
-.My-Color-Theme-4-rgba { color: rgba(221, 198, 191, 1); }
-.My-Color-Theme-5-rgba { color: rgba(249, 219, 214, 1); }
-
-/* Color Theme Swatches in HSLA */
-.My-Color-Theme-1-hsla { color: hsla(41, 77, 91, 1); }
-.My-Color-Theme-2-hsla { color: hsla(32, 31, 80, 1); }
-.My-Color-Theme-3-hsla { color: hsla(24, 52, 91, 1); }
-.My-Color-Theme-4-hsla { color: hsla(15, 31, 80, 1); }
-.My-Color-Theme-5-hsla { color: hsla(6, 77, 91, 1); }
-
-
-
-/* ff2586 */
-
-
-/* previous button coolor E97878 */
-
-
-/* background: url('./back-rice.jpeg') no-repeat center; */
-/* background-size: cover; */
+.operating-hours span {
+  font-weight: bold;
+}

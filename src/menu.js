@@ -18,7 +18,7 @@ const createMenuPage = function() {
 
     <div class="menu-display">
         <button type="button" class="breakfast">Breakfast</button>
-        <button type="button" class="main-dishes">Main Dishes</button>
+        <button type="button" class="main-dishes">Main</button>
         <button type="button" class="dessert">Dessert</button>
         <button type="button" class="drinks">Drinks/Cocktails</button>
 
@@ -29,16 +29,16 @@ const createMenuPage = function() {
             <div class="row">
                 <div class="item">
                     <div class="description">
-                        <p>Avocado Toast</p>
-                        <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                        <p class="food-name">Avocado Toast</p>
+                        <p>facilisi etiam dignissim diam quis enim</p>
                     </div>
                     <img src="./img/avocavo-toast.png" alt="toast-image">
                 </div>
 
                 <div class="item">
                     <div class="description">
-                        <p>pancakes</p>
-                        <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                        <p class="food-name">Pancakes</p>
+                        <p>ut tortor pretium viverra suspendisse potenti</p>
                     </div>
                     <img src="./img/pancakes.jpg" alt="pancakes image">
                 </div>
@@ -47,16 +47,16 @@ const createMenuPage = function() {
             <div class="row">
                 <div class="item">
                     <div class="description">
-                        <p>House Eggs</p>
-                        <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                        <p class="food-name">Breakfast Platter</p>
+                        <p>viverra orci sagittis eu volutpat odio</p>
                     </div>
-                    <img src="./img/house-eggs.jpg" alt="house-eggs image">
+                    <img src="./img/breakfast-platter.jpg" alt="breakfast-platter image">
                 </div>
 
                 <div class="item">
                     <div class="description">
-                        <p>Classic Eggs</p>
-                        <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                        <p class="food-name">Classic Eggs</p>
+                        <p>feugiat vivamus at augue eget arcu</p>
                     </div>
                     <img src="./img/classic-eggs.jpg" alt="classic-eggs image">
                 </div>
@@ -85,6 +85,7 @@ const createMenuPage = function() {
     const breakfastButton = document.querySelector('.breakfast');
     breakfastButton.addEventListener('click', () => {
         console.log("Breakfast time!")
+        
         menuHeader.style.backgroundImage = "url('./img/menu.jpg')";
 
 
@@ -95,16 +96,16 @@ const createMenuPage = function() {
         <div class="row">
             <div class="item">
                 <div class="description">
-                    <p>Avocado Toast</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Avocado Toast</p>
+                    <p>facilisi etiam dignissim diam quis enim</p>
                 </div>
                 <img src="./img/avocavo-toast.png" alt="toast-image">
             </div>
 
             <div class="item">
                 <div class="description">
-                    <p>pancakes</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Pancakes</p>
+                    <p>ut tortor pretium viverra suspendisse potenti</p>
                 </div>
                 <img src="./img/pancakes.jpg" alt="pancakes image">
             </div>
@@ -113,16 +114,16 @@ const createMenuPage = function() {
         <div class="row">
             <div class="item">
                 <div class="description">
-                    <p>House Eggs</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Breakfast Platter</p>
+                    <p>viverra orci sagittis eu volutpat odio</p>
                 </div>
-                <img src="./img/house-eggs.jpg" alt="house-eggs image">
+                <img src="./img/breakfast-platter.jpg" alt="breakfast-platter image">
             </div>
 
             <div class="item">
                 <div class="description">
-                    <p>Classic Eggs</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Classic Eggs</p>
+                    <p>feugiat vivamus at augue eget arcu</p>
                 </div>
                 <img src="./img/classic-eggs.jpg" alt="classic-eggs image">
             </div>
@@ -143,21 +144,21 @@ const createMenuPage = function() {
 
 
         menuItems.innerHTML = `            
-        <h2>Main Dishes</h2>
+        <h2>Main Menu</h2>
 
         <div class="row">
             <div class="item">
                 <div class="description">
-                    <p>Lamb Chops</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Lamb Chops</p>
+                    <p>nunc sed velit dignissim sodales ut</p>
                 </div>
                 <img src="./img/lamb-chops.jpg" alt="lamb-image">
             </div>
 
             <div class="item">
                 <div class="description">
-                    <p>House Salad</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">House Salad</p>
+                    <p>nec tincidunt praesent semper feugiat nibh</p>
                 </div>
                 <img src="./img/house-salad.jpg" alt="house-salad image">
             </div>
@@ -166,16 +167,16 @@ const createMenuPage = function() {
         <div class="row">
             <div class="item">
                 <div class="description">
-                    <p>Famous Burger</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Famous Burger</p>
+                    <p>aliquet enim tortor at auctor urna</p>
                 </div>
                 <img src="./img/famous-burger.jpg" alt="burger-image">
             </div>
 
             <div class="item">
                 <div class="description">
-                    <p>Soup for the Soul</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Soup for the Soul</p>
+                    <p>donec enim diam vulputate ut pharetra</p>
                 </div>
                 <img src="./img/soup-for-the-soul.jpg" alt="soup-image">
             </div>
@@ -191,6 +192,7 @@ const createMenuPage = function() {
 
         menuHeader.style.backgroundImage = "url('./img/dessert-header.jpg')";
 
+        
 
         menuItems.innerHTML = `        
         <h2>Dessert Menu</h2>
@@ -198,16 +200,16 @@ const createMenuPage = function() {
         <div class="row">
             <div class="item">
                 <div class="description">
-                    <p>Brownie</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Brownie</p>
+                    <p>sagittis id consectetur purus ut faucibus</p>
                 </div>
                 <img src="./img/brownie.jpg" alt="brownie-image">
             </div>
 
             <div class="item">
                 <div class="description">
-                    <p>Icecream Cake</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Icecream Cake</p>
+                    <p>eu tincidunt tortor aliquam nulla facilisi</p>
                 </div>
                 <img src="./img/ice-cream-cake.jpg" alt="ice-cream image">
             </div>
@@ -216,16 +218,16 @@ const createMenuPage = function() {
         <div class="row">
             <div class="item">
                 <div class="description">
-                    <p>Cheesecake</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Cheesecake</p>
+                    <p>vitae aliquet nec ullamcorper sit amet</p>
                 </div>
                 <img src="./img/cheesecake.jpg" alt="cheese-cake image">
             </div>
 
             <div class="item">
                 <div class="description">
-                    <p>House Delight</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">House Delight</p>
+                    <p>commodo viverra maecenas accumsan lacus vel</p>
                 </div>
                 <img src="./img/house-delight.jpg" alt="House-Delight Image">
             </div>
@@ -248,16 +250,16 @@ const createMenuPage = function() {
         <div class="row">
             <div class="item">
                 <div class="description">
-                    <p>Beer</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Beer</p>
+                    <p>nisi porta lorem mollis aliquam ut</p>
                 </div>
                 <img src="./img/beer.jpg" alt="beer image">
             </div>
 
             <div class="item">
                 <div class="description">
-                    <p>Wine</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Wine</p>
+                    <p>elit sed vulputate mi sit amet</p>
                 </div>
                 <img src="./img/wine.jpg" alt="wine image">
             </div>
@@ -266,16 +268,16 @@ const createMenuPage = function() {
         <div class="row">
             <div class="item">
                 <div class="description">
-                    <p>Cocktails</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Cocktails</p>
+                    <p>nunc lobortis mattis aliquam faucibus purus</p>
                 </div>
                 <img src="./img/cocktails.jpg" alt="cocktail image">
             </div>
 
             <div class="item">
                 <div class="description">
-                    <p>Non-alcoholic</p>
-                    <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
+                    <p class="food-name">Non-alcoholic</p>
+                    <p>vitae auctor eu augue ut lectus</p>
                 </div>
                 <img src="./img/juice.jpg" alt="Juice image">
             </div>
