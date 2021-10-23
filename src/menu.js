@@ -1,4 +1,4 @@
-import { createNavBar, clearPage } from "./home";
+import { createNavBar, clearPage } from ".";
 
 
 const createMenuPage = function() {
