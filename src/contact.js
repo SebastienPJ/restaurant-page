@@ -1,8 +1,13 @@
-import { createNavBar } from "./home";
+import { clearPage, createNavBar } from "./home";
 
 
 const createContactPage = function() {
+  
+  clearPage();
+  
   console.log('Contact page has been created')
+
+
 
 
   const topDiv = document.querySelector('#content');

@@ -11,8 +11,8 @@ body {
 }
 
 h1 {
-  font-size: calc(2em + 2vw);
-  color: rgb(193, 193, 193);
+  font-size: calc(2em + 3vw);
+  color: #4b687f;
 }
 
 main {
@@ -28,56 +28,90 @@ header {
   align-items: center;
 }
 
+/******* NAV BAR *******/
+
 .navigation-section {
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(248, 246, 246, 0.4);
+
 }
 
 
 nav button {
-  margin: 20px;
-  border: none;
+  margin: 5px 20px;
+  border: 1px solid #4b687f;
   outline: none;
   cursor: pointer;
   font-size: 2rem;
   padding: 10px 12px;
-  background-color: #FAEFD7;
-  color: #ff2586;
+  background-color: transparent;
+  color: #4b687f;
+
+
+
+
+  /*   background-color: #FAEFD7;
+  color: #ff2586; */
 }
 
 nav button:hover {
-  background:#ff2586;
-  color: black;
+  background:#4b687f;
+  color: white;
 }
+
+
 
 
 
 /***** HOME PAGE SECTION *****/
 
 .home-page {
-  /* background-image: url('images/homepage.jpg'); */
-  /* background-image: url('images/homeimage.jpg'); */
-
-  /* background-image: url('images/bistro.jpg'); */
-  /* background-position: left; */
-  /* background-size: cover; */
-
-  
+  display: flex;
+  flex-direction: column;
   height: 100vh;
 }
+
+.home-page h1{
+  color: #c1c1c1;
+  font-size: calc(2em + 2vw);
+}
+
+.home-page h2 {
+  color: #c1c1c1;
+  font-size: calc(1em + 2vw);
+}
+
+.menu-link {
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+  cursor: pointer;
+  font-size: calc(1rem + 2vw);
+  color: #c1c1c1;
+}
+
+
+.menu-link:hover {
+  color: #4b687f;
+  border-bottom: 1px solid #4b687f;
+}
+
+
 
 .footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* background: rgb(138, 138, 138); */
   background: #1f1f1f;
+  padding: 20px 0;
 
   color: rgb(193, 193, 193);
-  /* border-top: 3px solid black; */
-
-  /* height: 100px; */
 }
+
+
 
 
 
@@ -90,11 +124,6 @@ nav button:hover {
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
-}
-
-.menu-header h1 {
-  font-size: calc(2em + 5vw);
-
 }
 
 
@@ -178,7 +207,7 @@ nav button:hover {
 
 
 .contact-form h2 {
-text-align: center;
+  text-align: center;
 
 
 }

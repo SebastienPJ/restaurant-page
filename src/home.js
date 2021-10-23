@@ -1,5 +1,4 @@
-import backgroundImage from "./images/back-rice.jpeg";
-import Icon from "./images/icon.png";
+import Icon from "./images/logo.png";
 import { createMenuPage } from "./menu";
 import { createContactPage }  from "./contact"
 
@@ -11,6 +10,8 @@ const clearPage = function() {
 
 
 const createHomePage = function() {
+
+  clearPage();
 
 
   const mainDiv = document.querySelector('#content');
@@ -37,7 +38,12 @@ const createHomePage = function() {
   home.appendChild(message);
 
 
+  const callToAction = document.createElement('h2');
+  callToAction.innerHTML = 'Check out our <button class="menu-link">Menu</button>';
+  home.appendChild(callToAction);
 
+
+  /***** FOOTER *****/
   const footer = document.createElement('footer');
   footer.classList.add('footer');
   footer.innerHTML = `
@@ -61,6 +67,10 @@ const createHomePage = function() {
   </div> `
 
   mainDiv.appendChild(footer);
+
+
+  const menuLink = document.querySelector('.menu-link');
+  menuLink.addEventListener('click', createMenuPage)
 
 };
 
@@ -100,32 +110,23 @@ const createNavBar = function() {
   /***** HOME PAGE *****/
   const homeButton = document.createElement('button');
   homeButton.textContent = "Home";
-  homeButton.addEventListener("click", () => {
-    clearPage();
-    createHomePage();
-  });
+  homeButton.addEventListener("click", createHomePage);
   navButtons.appendChild(homeButton);
 
 
   /***** MENU PAGE ******/
   const menuButton = document.createElement('button');
   menuButton.textContent = "Menu"
-  menuButton.addEventListener("click", () => {
-    clearPage();
-    createMenuPage();
-  });
+  menuButton.addEventListener("click", createMenuPage);
   navButtons.appendChild(menuButton);
 
 
 
 
-  /***** CONTACt PAGE *****/
+  /***** CONTACT PAGE *****/
   const contactButton = document.createElement('button');
   contactButton.textContent = "Contact";
-  contactButton.addEventListener("click", () => {
-    clearPage();
-    createContactPage();
-  })
+  contactButton.addEventListener("click", createContactPage);
   navButtons.appendChild(contactButton);
 
   return navBar;
@@ -133,4 +134,4 @@ const createNavBar = function() {
 };
 
 
-export { createHomePage, createNavBar }
+export { createHomePage, createNavBar, clearPage }

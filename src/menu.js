@@ -1,8 +1,13 @@
-import { createNavBar } from "./home";
-
+import { createNavBar, clearPage } from "./home";
 
 
 const createMenuPage = function() {
+    
+    
+    clearPage()
+
+
+
     console.log("menu Page created")
 
     const contentDiv = document.querySelector('#content');
@@ -84,6 +89,7 @@ const createMenuPage = function() {
 
     const breakfastButton = document.querySelector('.breakfast');
     breakfastButton.addEventListener('click', () => {
+        // console.log(this)
         console.log("Breakfast time!")
         
         menuHeader.style.backgroundImage = "url('./img/menu.jpg')";
@@ -192,7 +198,7 @@ const createMenuPage = function() {
 
         menuHeader.style.backgroundImage = "url('./img/dessert-header.jpg')";
 
-        
+
 
         menuItems.innerHTML = `        
         <h2>Dessert Menu</h2>
