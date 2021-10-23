@@ -1,6 +1,7 @@
 import backgroundImage from "./images/back-rice.jpeg";
 import Icon from "./images/icon.png";
 import { createMenuPage } from "./menu";
+import { createContactPage }  from "./contact"
 
 const clearPage = function() {
   const content = document.querySelector('#content');
@@ -41,21 +42,21 @@ const createNavBar = function() {
   // const contentDiv = document.querySelector('#content');
 
   const navBar = document.createElement('div');
-  navBar.classList.add('navigation-bar');
+  navBar.classList.add('navigation-section');
 
 
 
 
-  const header = document.createElement('header');
-  header.classList.add('header');
-  navBar.appendChild(header);
+  // const header = document.createElement('header');
+  // header.classList.add('header');
+  // navBar.appendChild(header);
 
 
   /***** LOGO LINK *****/
   const logoLink = document.createElement('a');
   logoLink.classList.add('logo-link');
   logoLink.href = "index.html";
-  header.appendChild(logoLink);
+  navBar.appendChild(logoLink);
 
 
   const myIcon = new Image();
@@ -65,7 +66,7 @@ const createNavBar = function() {
 
 
   const navButtons = document.createElement('nav');
-  header.appendChild(navButtons);
+  navBar.appendChild(navButtons);
 
 
 

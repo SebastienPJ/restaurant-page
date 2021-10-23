@@ -12,7 +12,7 @@ const createMenuPage = function() {
     const menuContainer = document.createElement('div');
     menuContainer.classList.add('menu');
     menuContainer.innerHTML = ` 
-    <header>
+    <header class="menu-header">
         <h1>Menu</h1>
     </header>
 
@@ -32,7 +32,7 @@ const createMenuPage = function() {
                         <p>Avocado Toast</p>
                         <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                     </div>
-                    <img src="./img/avocavo-toast.jpg" alt="toast-image" class="toast">
+                    <img src="./img/avocavo-toast.png" alt="toast-image">
                 </div>
 
                 <div class="item">
@@ -40,7 +40,7 @@ const createMenuPage = function() {
                         <p>pancakes</p>
                         <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                     </div>
-                    <img src="./img/pancakes.jpg" alt="pancakes" class="toast">
+                    <img src="./img/pancakes.jpg" alt="pancakes image">
                 </div>
             </div>
 
@@ -50,7 +50,7 @@ const createMenuPage = function() {
                         <p>House Eggs</p>
                         <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                     </div>
-                    <img src="./img/eggs.jpg" alt="eggs" class="toast">
+                    <img src="./img/house-eggs.jpg" alt="house-eggs image">
                 </div>
 
                 <div class="item">
@@ -58,14 +58,26 @@ const createMenuPage = function() {
                         <p>Classic Eggs</p>
                         <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                     </div>
-                    <img src="./img/eggs1.jpg" alt="eggs1" class="toast">
+                    <img src="./img/classic-eggs.jpg" alt="classic-eggs image">
                 </div>
             </div>
         </div>
     </div>`
 
 
+
+
+
     contentDiv.appendChild(menuContainer);
+
+
+    const menuHeader = document.querySelector('.menu-header');
+    menuHeader.style.backgroundImage = "url('./img/menu.jpg')";
+    // headline.style.backgroundSize = 'cover';
+    // headline.style.backgroundPosition = 'center'
+
+
+
 
 
     const menuItems = document.querySelector(".menu-items");
@@ -73,6 +85,10 @@ const createMenuPage = function() {
     const breakfastButton = document.querySelector('.breakfast');
     breakfastButton.addEventListener('click', () => {
         console.log("Breakfast time!")
+        menuHeader.style.backgroundImage = "url('./img/menu.jpg')";
+
+
+
         menuItems.innerHTML = `            
         <h2>Breakfast Menu</h2>
 
@@ -82,7 +98,7 @@ const createMenuPage = function() {
                     <p>Avocado Toast</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/avocavo-toast.jpg" alt="toast-image" class="toast">
+                <img src="./img/avocavo-toast.png" alt="toast-image">
             </div>
 
             <div class="item">
@@ -90,7 +106,7 @@ const createMenuPage = function() {
                     <p>pancakes</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/pancakes.jpg" alt="pancakes" class="toast">
+                <img src="./img/pancakes.jpg" alt="pancakes image">
             </div>
         </div>
 
@@ -100,7 +116,7 @@ const createMenuPage = function() {
                     <p>House Eggs</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/eggs.jpg" alt="eggs" class="toast">
+                <img src="./img/house-eggs.jpg" alt="house-eggs image">
             </div>
 
             <div class="item">
@@ -108,16 +124,23 @@ const createMenuPage = function() {
                     <p>Classic Eggs</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/eggs1.jpg" alt="eggs1" class="toast">
+                <img src="./img/classic-eggs.jpg" alt="classic-eggs image">
             </div>
         </div>`
 
         // showSelectedMenu("breakfast");
     });
 
+
+
+
     const mainDishButton = document.querySelector('.main-dishes');
     mainDishButton.addEventListener('click', () => {
         console.log("Main dish is served!");
+        
+
+        menuHeader.style.backgroundImage = "url('./img/main-dish-header.jpg')";
+
 
         menuItems.innerHTML = `            
         <h2>Main Dishes</h2>
@@ -128,7 +151,7 @@ const createMenuPage = function() {
                     <p>Lamb Chops</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/lamb.jpg" alt="lamb-image" class="lamb">
+                <img src="./img/lamb-chops.jpg" alt="lamb-image">
             </div>
 
             <div class="item">
@@ -136,7 +159,7 @@ const createMenuPage = function() {
                     <p>House Salad</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/salad.jpg" alt="pancakes" class="salad">
+                <img src="./img/house-salad.jpg" alt="house-salad image">
             </div>
         </div>
 
@@ -146,7 +169,7 @@ const createMenuPage = function() {
                     <p>Famous Burger</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/burger.jpg" alt="eggs" class="toast">
+                <img src="./img/famous-burger.jpg" alt="burger-image">
             </div>
 
             <div class="item">
@@ -154,7 +177,7 @@ const createMenuPage = function() {
                     <p>Soup for the Soul</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/soup.jpg" alt="eggs1" class="toast">
+                <img src="./img/soup-for-the-soul.jpg" alt="soup-image">
             </div>
         </div>`
 
@@ -166,6 +189,9 @@ const createMenuPage = function() {
     dessertButton.addEventListener('click', () => {
         console.log("Getting our sweet tooth on!")
 
+        menuHeader.style.backgroundImage = "url('./img/dessert-header.jpg')";
+
+
         menuItems.innerHTML = `        
         <h2>Dessert Menu</h2>
 
@@ -175,7 +201,7 @@ const createMenuPage = function() {
                     <p>Brownie</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/brownie.jpg" alt="lamb-image" class="brownie">
+                <img src="./img/brownie.jpg" alt="brownie-image">
             </div>
 
             <div class="item">
@@ -183,7 +209,7 @@ const createMenuPage = function() {
                     <p>Icecream Cake</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/icecreamcake.jpg" alt="pancakes" class="cake">
+                <img src="./img/ice-cream-cake.jpg" alt="ice-cream image">
             </div>
         </div>
 
@@ -193,7 +219,7 @@ const createMenuPage = function() {
                     <p>Cheesecake</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/cheesecake.jpg" alt="eggs" class="cheesecake">
+                <img src="./img/cheesecake.jpg" alt="cheese-cake image">
             </div>
 
             <div class="item">
@@ -201,7 +227,7 @@ const createMenuPage = function() {
                     <p>House Delight</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/delight.jpg" alt="eggs1" class="toast">
+                <img src="./img/house-delight.jpg" alt="House-Delight Image">
             </div>
         </div>`
     });
@@ -210,6 +236,11 @@ const createMenuPage = function() {
     const drinksButton = document.querySelector(".drinks");
     drinksButton.addEventListener('click', () => {
         console.log('Party Time!!!')
+
+
+        menuHeader.style.backgroundImage = "url('./img/drinks-header.jpg')";
+
+
 
         menuItems.innerHTML = `        
         <h2>Drinks Menu</h2>
@@ -220,7 +251,7 @@ const createMenuPage = function() {
                     <p>Beer</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/beer.jpg" alt="lamb-image" class="beer">
+                <img src="./img/beer.jpg" alt="beer image">
             </div>
 
             <div class="item">
@@ -228,7 +259,7 @@ const createMenuPage = function() {
                     <p>Wine</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/wine.jpg" alt="pancakes" class="wine">
+                <img src="./img/wine.jpg" alt="wine image">
             </div>
         </div>
 
@@ -238,7 +269,7 @@ const createMenuPage = function() {
                     <p>Cocktails</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/cocktails.jpg" alt="eggs" class="cocktails">
+                <img src="./img/cocktails.jpg" alt="cocktail image">
             </div>
 
             <div class="item">
@@ -246,7 +277,7 @@ const createMenuPage = function() {
                     <p>Non-alcoholic</p>
                     <p>aksjf ;akjsdflaskjdf kjasdkfaskjfs</p>
                 </div>
-                <img src="./img/juice.jpg" alt="eggs1" class="juice">
+                <img src="./img/juice.jpg" alt="Juice image">
             </div>
         </div>`
     })
