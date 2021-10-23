@@ -12,7 +12,7 @@ body {
 
 h1 {
   font-size: calc(2em + 2vw);
-  color: rgb(194, 193, 193);
+  color: rgb(193, 193, 193);
 }
 
 main {
@@ -49,6 +49,37 @@ nav button:hover {
   background:#ff2586;
   color: black;
 }
+
+
+
+/***** HOME PAGE SECTION *****/
+
+.home-page {
+  /* background-image: url('images/homepage.jpg'); */
+  /* background-image: url('images/homeimage.jpg'); */
+
+  /* background-image: url('images/bistro.jpg'); */
+  /* background-position: left; */
+  /* background-size: cover; */
+
+  
+  height: 100vh;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* background: rgb(138, 138, 138); */
+  background: #1f1f1f;
+
+  color: rgb(193, 193, 193);
+  /* border-top: 3px solid black; */
+
+  /* height: 100px; */
+}
+
+
 
 
 

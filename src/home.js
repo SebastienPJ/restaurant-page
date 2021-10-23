@@ -22,18 +22,45 @@ const createHomePage = function() {
 
 
   /***** Message on main page *****/
-  const headline = document.createElement('main');
-  headline.style.backgroundImage = "url('./img/back-rice.jpg')";
-  headline.style.backgroundSize = 'cover';
-  headline.style.backgroundPosition = 'center'
+  const home = document.createElement('main');
+  home.style.backgroundImage = "url('./img/bistro.jpg')";
+  home.style.backgroundSize = 'cover';
+  home.style.backgroundPosition = 'left';
+  home.classList.add('home-page');
 
 
 
-  mainDiv.appendChild(headline);
+  mainDiv.appendChild(home);
 
   const message = document.createElement('h1');
-  message.textContent = "Satisfying taste buds since 1943!"
-  headline.appendChild(message);
+  message.textContent = "Satisfying taste buds since 1921!";
+  home.appendChild(message);
+
+
+
+  const footer = document.createElement('footer');
+  footer.classList.add('footer');
+  footer.innerHTML = `
+    <div class="address-section">
+      <h2>Find us</h2>
+      <p>3224 Street Blvd</p>
+      <p>City, State</p>
+      <p>Zip Code</p>
+      <p>000-000-0000</p>
+    </div>
+
+
+    <div class="operating-hours">
+      <h2> Hours</h2>
+      <p> <span>Monday - Friday:</span> 10:00 am - 11:00 pm</p>
+      <p> <span>Saturday:</span> 9:00 am - 11:30 pm</p>
+      <p> <span>Sunday</span> 9:00 am - 9:00 pm</p>
+
+    </div>
+
+  </div> `
+
+  mainDiv.appendChild(footer);
 
 };
 
