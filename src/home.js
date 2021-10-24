@@ -14,7 +14,7 @@ const createHomePage = function() {
 
   mainDiv.appendChild(createNavBar());
   
-
+  
 
 
 
