@@ -110,12 +110,14 @@ header {
 .home-page h1{
   color: #c1c1c1;
   font-size: calc(2em + 2vw);
+  text-align: center;
 }
 
 .home-page h2 {
   color: #c1c1c1;
   font-size: calc(1em + 2vw);
 }
+
 
 .menu-link {
   border: none;
@@ -185,7 +187,7 @@ header {
 
 .menu-items h2 {
   margin-bottom: 40px;
-  font-size: 2.6rem;
+  font-size: calc(2em + 1vw);
   border-bottom: 3px solid black;
   padding: 0 0 10px 0 ;
 }
@@ -227,7 +229,8 @@ header {
   background-position: center;
   background-size: cover;
   justify-content: center;
-  border: 1px solid rgb(111, 117, 111);
+  text-align: center;
+  /* border: 1px solid rgb(111, 117, 111); */
 
 }
 
@@ -241,8 +244,6 @@ header {
 
 .contact-form h2 {
   text-align: center;
-
-
 }
 
 
@@ -286,6 +287,7 @@ textarea {
 
 .address-section,
 .operating-hours {
+  padding: 0 20px;
   text-align: center;
 }
 
@@ -304,7 +306,7 @@ textarea {
 
 
 
-@media (max-width:700px) {
+@media (max-width:900px) {
 
   /***** NAV CHANGES *****/
   .company-logo {
@@ -346,5 +348,44 @@ textarea {
   .open-menu {
     display: flex;
   }
+
+
+  /******* MENU CHANGES *******/
+  .menu-display button {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+  }
+
+  .description {
+    padding-right: 10px;
+  }
+
+
+  .item {
+    padding: 0 5px;
+  }
+
+  .item img {
+    width: 150px;
+  }
+
+
+  /******* CONTACT CHANGES *****/
+
+  .contact-form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .address-section,
+  .operating-hours {
+    margin-top: 25px;
+  }
+
+  .contact-display {
+    flex-direction: column;
+  }
+
 
 }

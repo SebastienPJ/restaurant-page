@@ -24,7 +24,7 @@ const createNavBar = function() {
   
     const brandContainer = document.createElement('div');
     brandContainer.classList.add('logo-container');
-    navBar.appendChild(brandContainer)
+    navBar.appendChild(brandContainer);
 
     const logoLink = document.createElement('a');
     logoLink.href = "index.html";

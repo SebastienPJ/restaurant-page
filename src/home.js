@@ -24,11 +24,14 @@ const createHomePage = function() {
   home.style.backgroundSize = 'cover';
   home.style.backgroundPosition = 'left';
   home.classList.add('home-page');
-
-
-
   mainDiv.appendChild(home);
 
+
+  // const messageContainer = document.createElement('div')
+  // messageContainer.classList.add('message-container');
+  // home.appendChild(messageContainer);
+
+  
   const message = document.createElement('h1');
   message.textContent = "Satisfying taste buds since 1921!";
   home.appendChild(message);

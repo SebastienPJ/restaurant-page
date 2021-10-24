@@ -24,9 +24,17 @@ const createContactPage = function() {
 
   <div class="contact-display">
     <form action="" class="contact-form">
-      <h2 class="form-header">How did we do?</h2>
 
       <table>
+        <tr>
+          <td class="form-label">
+          </td>
+          <td>
+            <h2 class="form-header">How did we do?</h2>
+          </td>
+        </tr>
+
+
         <tr>
           <td class="form-label">
             <label for="name">Name:</label>
@@ -51,7 +59,7 @@ const createContactPage = function() {
             <label for="message">Message:</label>
           </td>
           <td>
-            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+            <textarea name="message" id="message" cols="20" rows="10" required></textarea>
           </td>
         </tr>
 
