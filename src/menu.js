@@ -78,8 +78,7 @@ const createMenuPage = function() {
 
     const menuHeader = document.querySelector('.menu-header');
     menuHeader.style.backgroundImage = "url('./img/menu.jpg')";
-    // headline.style.backgroundSize = 'cover';
-    // headline.style.backgroundPosition = 'center'
+
 
 
 
@@ -89,7 +88,6 @@ const createMenuPage = function() {
 
     const breakfastButton = document.querySelector('.breakfast');
     breakfastButton.addEventListener('click', () => {
-        // console.log(this)
         console.log("Breakfast time!")
         
         menuHeader.style.backgroundImage = "url('./img/menu.jpg')";
@@ -135,7 +133,6 @@ const createMenuPage = function() {
             </div>
         </div>`
 
-        // showSelectedMenu("breakfast");
     });
 
 

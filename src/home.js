@@ -27,11 +27,7 @@ const createHomePage = function() {
   mainDiv.appendChild(home);
 
 
-  // const messageContainer = document.createElement('div')
-  // messageContainer.classList.add('message-container');
-  // home.appendChild(messageContainer);
-
-  
+   
   const message = document.createElement('h1');
   message.textContent = "Satisfying taste buds since 1921!";
   home.appendChild(message);
