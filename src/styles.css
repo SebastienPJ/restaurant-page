@@ -52,7 +52,7 @@ header {
   margin: 0;
   padding: 0;
   display: flex;
-  background: url('/src/images/screenshot-menu.png');
+  /* background: url('/src/images/screenshot-menu.png'); */
 
 }
 
@@ -294,7 +294,7 @@ textarea {
 
 
 
-.operating-hours span {
+.operating-hours .days-open {
   font-weight: bold;
 }
 
