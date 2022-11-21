@@ -1,44 +1,31 @@
-import { createMenuPage } from "./menu";
-import { createNavBar } from ".";
-import { clearPage } from ".";
+import { createMenuPage } from './menu';
+import { createNavBar, clearPage } from '.';
+import bistroImg from './images/bistro.jpg';
 
-
-
-
-const createHomePage = function() {
-
+const createHomePage = () => {
   clearPage();
-
 
   const mainDiv = document.querySelector('#content');
 
   mainDiv.appendChild(createNavBar());
-  
-  
 
-
-
-  /***** Message on main page *****/
+  /** *** Message on main page **** */
   const home = document.createElement('main');
-  home.style.backgroundImage = "url('./img/bistro.jpg')";
+  home.style.backgroundImage = `url(${bistroImg})`;
   home.style.backgroundSize = 'cover';
   home.style.backgroundPosition = 'left';
   home.classList.add('home-page');
   mainDiv.appendChild(home);
 
-
-   
   const message = document.createElement('h1');
-  message.textContent = "Satisfying taste buds since 1921!";
+  message.textContent = 'Satisfying taste buds since 1921!';
   home.appendChild(message);
-
 
   const callToAction = document.createElement('h2');
   callToAction.innerHTML = 'Check out our <button class="menu-link">Menu</button>';
   home.appendChild(callToAction);
 
-
-  /***** FOOTER *****/
+  /** *** FOOTER **** */
   const footer = document.createElement('footer');
   footer.classList.add('footer');
   footer.innerHTML = `
@@ -59,17 +46,12 @@ const createHomePage = function() {
 
     </div>
 
-  </div> `
+  </div> `;
 
   mainDiv.appendChild(footer);
 
-
   const menuLink = document.querySelector('.menu-link');
-  menuLink.addEventListener('click', createMenuPage)
-
+  menuLink.addEventListener('click', createMenuPage);
 };
 
-
-
-
-export { createHomePage }
+export { createHomePage };

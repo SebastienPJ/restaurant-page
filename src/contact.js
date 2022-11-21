@@ -1,19 +1,11 @@
-import { clearPage, createNavBar } from ".";
+import { clearPage, createNavBar } from '.';
 
-
-const createContactPage = function() {
-  
+const createContactPage = () => {
   clearPage();
-  
-  console.log('Contact page has been created')
-
-
-
 
   const topDiv = document.querySelector('#content');
 
   topDiv.appendChild(createNavBar());
-
 
   const contactContainer = document.createElement('div');
 
@@ -99,16 +91,12 @@ const createContactPage = function() {
     
     </div>
 
-  </div>`
+  </div>`;
 
   topDiv.appendChild(contactContainer);
 
-
-  const contactHeader = document.querySelector(".contact-header");
+  const contactHeader = document.querySelector('.contact-header');
   contactHeader.style.backgroundImage = "url('./img/contact-header.jpg')";
-
-
 };
 
-export { createContactPage }
-  
+export { createContactPage };

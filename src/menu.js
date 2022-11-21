@@ -1,22 +1,15 @@
-import { createNavBar, clearPage } from ".";
+import { createNavBar, clearPage } from '.';
 
+const createMenuPage = () => {
+  clearPage();
 
-const createMenuPage = function() {
-    
-    
-    clearPage()
+  const contentDiv = document.querySelector('#content');
 
+  contentDiv.appendChild(createNavBar());
 
-
-    console.log("menu Page created")
-
-    const contentDiv = document.querySelector('#content');
-
-    contentDiv.appendChild(createNavBar());
-
-    const menuContainer = document.createElement('div');
-    menuContainer.classList.add('menu');
-    menuContainer.innerHTML = ` 
+  const menuContainer = document.createElement('div');
+  menuContainer.classList.add('menu');
+  menuContainer.innerHTML = ` 
     <header class="menu-header">
         <h1>Menu</h1>
     </header>
@@ -67,34 +60,20 @@ const createMenuPage = function() {
                 </div>
             </div>
         </div>
-    </div>`
+    </div>`;
 
+  contentDiv.appendChild(menuContainer);
 
+  const menuHeader = document.querySelector('.menu-header');
+  menuHeader.style.backgroundImage = "url('./img/menu.jpg')";
 
+  const menuItems = document.querySelector('.menu-items');
 
-
-    contentDiv.appendChild(menuContainer);
-
-
-    const menuHeader = document.querySelector('.menu-header');
+  const breakfastButton = document.querySelector('.breakfast');
+  breakfastButton.addEventListener('click', () => {
     menuHeader.style.backgroundImage = "url('./img/menu.jpg')";
 
-
-
-
-
-
-    const menuItems = document.querySelector(".menu-items");
-
-    const breakfastButton = document.querySelector('.breakfast');
-    breakfastButton.addEventListener('click', () => {
-        console.log("Breakfast time!")
-        
-        menuHeader.style.backgroundImage = "url('./img/menu.jpg')";
-
-
-
-        menuItems.innerHTML = `            
+    menuItems.innerHTML = `            
         <h2>Breakfast Menu</h2>
 
         <div class="row">
@@ -131,22 +110,14 @@ const createMenuPage = function() {
                 </div>
                 <img src="./img/classic-eggs.jpg" alt="classic-eggs image">
             </div>
-        </div>`
+        </div>`;
+  });
 
-    });
+  const mainDishButton = document.querySelector('.main-dishes');
+  mainDishButton.addEventListener('click', () => {
+    menuHeader.style.backgroundImage = "url('./img/main-dish-header.jpg')";
 
-
-
-
-    const mainDishButton = document.querySelector('.main-dishes');
-    mainDishButton.addEventListener('click', () => {
-        console.log("Main dish is served!");
-        
-
-        menuHeader.style.backgroundImage = "url('./img/main-dish-header.jpg')";
-
-
-        menuItems.innerHTML = `            
+    menuItems.innerHTML = `            
         <h2>Main Menu</h2>
 
         <div class="row">
@@ -183,21 +154,14 @@ const createMenuPage = function() {
                 </div>
                 <img src="./img/soup-for-the-soul.jpg" alt="soup-image">
             </div>
-        </div>`
+        </div>`;
+  });
 
+  const dessertButton = document.querySelector('.dessert');
+  dessertButton.addEventListener('click', () => {
+    menuHeader.style.backgroundImage = "url('./img/dessert-header.jpg')";
 
-    });
-
-
-    const dessertButton = document.querySelector('.dessert');
-    dessertButton.addEventListener('click', () => {
-        console.log("Getting our sweet tooth on!")
-
-        menuHeader.style.backgroundImage = "url('./img/dessert-header.jpg')";
-
-
-
-        menuItems.innerHTML = `        
+    menuItems.innerHTML = `        
         <h2>Dessert Menu</h2>
 
         <div class="row">
@@ -234,20 +198,14 @@ const createMenuPage = function() {
                 </div>
                 <img src="./img/house-delight.jpg" alt="House-Delight Image">
             </div>
-        </div>`
-    });
+        </div>`;
+  });
 
+  const drinksButton = document.querySelector('.drinks');
+  drinksButton.addEventListener('click', () => {
+    menuHeader.style.backgroundImage = "url('./img/drinks-header.jpg')";
 
-    const drinksButton = document.querySelector(".drinks");
-    drinksButton.addEventListener('click', () => {
-        console.log('Party Time!!!')
-
-
-        menuHeader.style.backgroundImage = "url('./img/drinks-header.jpg')";
-
-
-
-        menuItems.innerHTML = `        
+    menuItems.innerHTML = `        
         <h2>Drinks Menu</h2>
 
         <div class="row">
@@ -284,16 +242,8 @@ const createMenuPage = function() {
                 </div>
                 <img src="./img/juice.jpg" alt="Juice image">
             </div>
-        </div>`
-    })
+        </div>`;
+  });
+};
 
-
-}; 
-
-
-
-
-
-export { createMenuPage }
-
-
+export { createMenuPage };
