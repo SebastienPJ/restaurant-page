@@ -52,8 +52,6 @@ header {
   margin: 0;
   padding: 0;
   display: flex;
-  background: url('/src/images/screenshot-menu.png');
-
 }
 
 .navbar li {
