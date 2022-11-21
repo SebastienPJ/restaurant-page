@@ -7,8 +7,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     // clean: true,
   },
-  devtool: "source-map",
-  
+  devtool: 'source-map',
+
   module: {
     rules: [
       {
@@ -19,8 +19,8 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'img/[name][ext][query]' 
-        }
+          filename: 'img/[name][ext][query]',
+        },
       },
     ],
   },
