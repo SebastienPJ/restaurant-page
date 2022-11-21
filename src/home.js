@@ -21,9 +21,18 @@ const createHomePage = () => {
   message.textContent = 'Satisfying taste buds since 1921!';
   home.appendChild(message);
 
-  const callToAction = document.createElement('h2');
-  callToAction.innerHTML = 'Check out our <button class="menu-link">Menu</button>';
-  home.appendChild(callToAction);
+  const callToActionContainer = document.createElement('h2');
+
+  const callToActionMessage = document.createElement('p');
+  callToActionMessage.textContent = 'Check out our';
+  callToActionContainer.appendChild(callToActionMessage);
+
+  const callToActionMenuButton = document.createElement('button');
+  callToActionMenuButton.classList.add('menu-link');
+  callToActionMenuButton.textContent = 'Menu';
+  callToActionMessage.appendChild(callToActionMenuButton);
+
+  home.appendChild(callToActionContainer);
 
   /** *** FOOTER **** */
   const footer = document.createElement('footer');
