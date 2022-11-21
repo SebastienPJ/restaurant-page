@@ -121,6 +121,7 @@ header {
 .menu-link {
   border: none;
   border-bottom: 1px solid white;
+  margin-left: 5px;
   background: transparent;
   cursor: pointer;
   font-size: calc(1rem + 2vw);
