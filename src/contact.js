@@ -1,4 +1,5 @@
 import { clearPage, createNavBar } from '.';
+import contactHeaderImg from './images/contact-header.jpg';
 
 const createContactPage = () => {
   clearPage();
@@ -96,7 +97,7 @@ const createContactPage = () => {
   topDiv.appendChild(contactContainer);
 
   const contactHeader = document.querySelector('.contact-header');
-  contactHeader.style.backgroundImage = "url('./img/contact-header.jpg')";
+  contactHeader.style.backgroundImage = `url(${contactHeaderImg})`;
 };
 
 export { createContactPage };
