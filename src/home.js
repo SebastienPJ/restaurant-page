@@ -37,25 +37,62 @@ const createHomePage = () => {
   /** *** FOOTER **** */
   const footer = document.createElement('footer');
   footer.classList.add('footer');
-  footer.innerHTML = `
-    <div class="address-section">
-      <h2>Find us</h2>
-      <p>3224 Street Blvd</p>
-      <p>City, State</p>
-      <p>Zip Code</p>
-      <p>000-000-0000</p>
-    </div>
 
+  const addressContainer = document.createElement('div');
+  addressContainer.classList.add('address-section');
+  footer.appendChild(addressContainer);
 
-    <div class="operating-hours">
-      <h2> Hours</h2>
-      <p> <span>Monday - Friday:</span> 10:00 am - 11:00 pm</p>
-      <p> <span>Saturday:</span> 9:00 am - 11:30 pm</p>
-      <p> <span>Sunday</span> 9:00 am - 9:00 pm</p>
+  const addressHeader = document.createElement('h2');
+  addressHeader.textContent = 'Find Us';
+  addressContainer.appendChild(addressHeader);
 
-    </div>
+  const street = document.createElement('p');
+  street.textContent = '3224 Street Blvd';
+  addressContainer.appendChild(street);
 
-  </div> `;
+  const cityState = document.createElement('p');
+  cityState.textContent = 'City, State';
+  addressContainer.appendChild(cityState);
+
+  const zipCode = document.createElement('p');
+  zipCode.textContent = 'Zip Code';
+  addressContainer.appendChild(zipCode);
+
+  const phoneNumber = document.createElement('p');
+  phoneNumber.textContent = '000-000-0000';
+  addressContainer.appendChild(phoneNumber);
+
+  const operatingHoursContainer = document.createElement('div');
+  operatingHoursContainer.classList.add('operating-hours');
+  footer.appendChild(operatingHoursContainer);
+
+  const hoursHeader = document.createElement('h2');
+  hoursHeader.textContent = 'Hours';
+  operatingHoursContainer.appendChild(hoursHeader);
+
+  const monFriHours = document.createElement('p');
+  const monFriSpan = document.createElement('span');
+  monFriSpan.textContent = 'Monday - Friday:';
+  monFriHours.appendChild(monFriSpan);
+  const monFriHoursOpen = document.createTextNode(' 10:00 am - 11:00 pm');
+  monFriHours.appendChild(monFriHoursOpen);
+  operatingHoursContainer.appendChild(monFriHours);
+
+  const satHours = document.createElement('p');
+  const satSpan = document.createElement('span');
+  satSpan.textContent = 'Saturday:';
+  satHours.appendChild(satSpan);
+  const satHoursOpen = document.createTextNode(' 9:00 am - 11:30 pm');
+  satHours.appendChild(satHoursOpen);
+  operatingHoursContainer.appendChild(satHours);
+
+  const sunHours = document.createElement('p');
+  const sunSpan = document.createElement('span');
+  sunSpan.textContent = 'Sunday:';
+  sunHours.appendChild(sunSpan);
+  const sunHoursOpen = document.createTextNode(' 9:00 am - 9:00 pm');
+  sunHours.appendChild(sunHoursOpen);
+  operatingHoursContainer.appendChild(sunHours);
 
   mainDiv.appendChild(footer);
 
