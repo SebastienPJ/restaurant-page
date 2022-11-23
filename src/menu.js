@@ -1,4 +1,8 @@
 import { createNavBar, clearPage } from '.';
+import menuImg from './images/menu.jpg';
+import mainDishImg from './images/main-dish-header.jpg';
+import dessertImg from './images/dessert-header.jpg';
+import drinksHeaderImg from './images/drinks-header.jpg';
 
 const createMenuPage = () => {
   clearPage();
@@ -65,13 +69,13 @@ const createMenuPage = () => {
   contentDiv.appendChild(menuContainer);
 
   const menuHeader = document.querySelector('.menu-header');
-  menuHeader.style.backgroundImage = "url('./img/menu.jpg')";
+  menuHeader.style.backgroundImage = `url(${menuImg})`;
 
   const menuItems = document.querySelector('.menu-items');
 
   const breakfastButton = document.querySelector('.breakfast');
   breakfastButton.addEventListener('click', () => {
-    menuHeader.style.backgroundImage = "url('./img/menu.jpg')";
+    menuHeader.style.backgroundImage = `url(${menuImg})`;
 
     menuItems.innerHTML = `            
         <h2>Breakfast Menu</h2>
@@ -115,7 +119,7 @@ const createMenuPage = () => {
 
   const mainDishButton = document.querySelector('.main-dishes');
   mainDishButton.addEventListener('click', () => {
-    menuHeader.style.backgroundImage = "url('./img/main-dish-header.jpg')";
+    menuHeader.style.backgroundImage = `url(${mainDishImg})`;
 
     menuItems.innerHTML = `            
         <h2>Main Menu</h2>
@@ -159,7 +163,7 @@ const createMenuPage = () => {
 
   const dessertButton = document.querySelector('.dessert');
   dessertButton.addEventListener('click', () => {
-    menuHeader.style.backgroundImage = "url('./img/dessert-header.jpg')";
+    menuHeader.style.backgroundImage = `url(${dessertImg})`;
 
     menuItems.innerHTML = `        
         <h2>Dessert Menu</h2>
@@ -203,7 +207,7 @@ const createMenuPage = () => {
 
   const drinksButton = document.querySelector('.drinks');
   drinksButton.addEventListener('click', () => {
-    menuHeader.style.backgroundImage = "url('./img/drinks-header.jpg')";
+    menuHeader.style.backgroundImage = `url(${drinksHeaderImg})`;
 
     menuItems.innerHTML = `        
         <h2>Drinks Menu</h2>
