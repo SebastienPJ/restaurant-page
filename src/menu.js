@@ -13,6 +13,26 @@ const createMenuPage = () => {
 
   const menuContainer = document.createElement('div');
   menuContainer.classList.add('menu');
+
+  const menuHeader = document.createElement('header');
+  menuHeader.classList.add('menu-header');
+  menuHeader.style.backgroundImage = `url(${menuImg})`;
+  menuContainer.appendChild(menuHeader);
+
+  const menuTitle = document.createElement('h1');
+  menuTitle.textContent = 'Menu';
+  menuHeader.appendChild(menuTitle);
+
+  contentDiv.appendChild(menuContainer);
+
+  const menuDisplay = document.createElement('div');
+  menuDisplay.classList.add('menu-display');
+  menuContainer.appendChild(menuDisplay);
+
+  const breakfastButton = document.createElement('button');
+  
+
+
   menuContainer.innerHTML = ` 
     <header class="menu-header">
         <h1>Menu</h1>
@@ -66,10 +86,7 @@ const createMenuPage = () => {
         </div>
     </div>`;
 
-  contentDiv.appendChild(menuContainer);
-
-  const menuHeader = document.querySelector('.menu-header');
-  menuHeader.style.backgroundImage = `url(${menuImg})`;
+  
 
   const menuItems = document.querySelector('.menu-items');
 
