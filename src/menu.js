@@ -29,9 +29,7 @@ const createMenuPage = () => {
   menuDisplay.classList.add('menu-display');
   menuContainer.appendChild(menuDisplay);
 
-  const breakfastButton = document.createElement('button');
-  
-
+//   const breakfastButton = document.createElement('button');
 
   menuContainer.innerHTML = ` 
     <header class="menu-header">
@@ -85,8 +83,6 @@ const createMenuPage = () => {
             </div>
         </div>
     </div>`;
-
-  
 
   const menuItems = document.querySelector('.menu-items');
 
